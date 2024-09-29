@@ -2,12 +2,15 @@ package org.programandoseufuturo.lojavirtual.model;
 
 import java.math.BigDecimal;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Produto {
@@ -33,6 +36,11 @@ public class Produto {
 
     @JsonProperty("quantidade_disponivel")
     private long quantidadeDisponivel;
+
+    @ManyToOne
+    @JoinColumn(name = "categoria_id")
+    @JsonBackReference
+    private Categoria categoria;
 
     public int getId() {
         return id;
