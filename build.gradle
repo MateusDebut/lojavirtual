@@ -13,10 +13,6 @@ java {
 	}
 }
 
-// bootJar {
-//     mainClassName = 'org.programandoseufuturo.lojavirtual.LojavirtualApplication' // substitua pelo nome do seu pacote e classe
-// }
-
 
 repositories {
 	mavenCentral()

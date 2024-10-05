@@ -106,4 +106,12 @@ public class Produto {
         this.quantidadeDisponivel = quantidadeDisponivel;
     }
 
+    public Categoria getCategoria() {
+        return categoria;
+    }
+    
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
+
 }
